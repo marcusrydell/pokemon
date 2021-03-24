@@ -1,0 +1,58 @@
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Pokemon';
+    align-items: center;
+    background-color: rgb(218, 108, 108);
+    color: rgb(82, 82, 82);
+    
+}
+.search{
+    width: 20vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#submit{
+    border: none;
+    height: 25px;
+    background-color: aquamarine;
+    
+}
+input{
+    border: none;
+    background-color: #fff;
+    height: 25px;
+}
+
+
+.pokemon{
+    height: 30vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    font-size: 3rem;
+    padding: 1rem;
+}
+img{
+    transform: scale(1.5);
+}
+
+.details{
+    font-size: 1.5rem;
+}
