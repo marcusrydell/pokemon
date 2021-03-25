@@ -1,8 +1,7 @@
 
-
+// HTML elements
 const submit = document.querySelector('#submit');
 const input = document.querySelector('input');
-
 const pokemonName = document.querySelector('.name');
 const height = document.querySelector('.height');
 const weight = document.querySelector('.weight');
@@ -16,12 +15,16 @@ submit.onclick = async () => {
         type: 'pokemon',
         name: input.value,
     }
-    const endPoint = `${api.url}${api.type}/${api.name}` 
+    const endPoint = `${api.url}${api.type}/${api.name.toLowerCase()}` 
     const response = await fetch(endPoint); 
     
     //Handle request error
     if(!response.ok){
-        pokemonName.innerHTML = 'inte ok asså, den pokemonen finns inte'
+        pokemonName.innerHTML = 'Unable to get pokemon'
+        height.innerHTML = ''
+        weight.innerHTML = ''
+        types.innerHTML = ''
+        document.querySelector('img').src = ''
     }
     else{
         const result = await response.json();
